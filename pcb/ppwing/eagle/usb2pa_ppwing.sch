@@ -15188,6 +15188,7 @@ new: Attribute TP_SIGNAL_NAME&lt;br&gt;
 <part name="JP5" library="jumper" deviceset="JP1E" device="" value="uninst"/>
 <part name="SUPPLY30" library="supply2" deviceset="GND" device=""/>
 <part name="CC_LICENSE" library="Cory" deviceset="CC_LICENSE" device=""/>
+<part name="SUPPLY31" library="supply2" deviceset="GND" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -15318,12 +15319,15 @@ http://creativecommons.org/</text>
 <attribute name="NAME" x="103.124" y="16.764" size="1.778" layer="95" rot="MR90"/>
 <attribute name="VALUE" x="104.14" y="22.225" size="1.27" layer="96" rot="MR0"/>
 </instance>
-<instance part="R11" gate="G$1" x="170.18" y="121.92" rot="R270"/>
+<instance part="R11" gate="G$1" x="170.18" y="121.92" smashed="yes" rot="R270">
+<attribute name="NAME" x="171.6786" y="124.968" size="1.27" layer="95" rot="R270"/>
+<attribute name="VALUE" x="167.386" y="125.222" size="1.27" layer="96" rot="R270"/>
+</instance>
 <instance part="SUPPLY19" gate="GND" x="154.94" y="129.54"/>
 <instance part="SUPPLY20" gate="GND" x="167.64" y="129.54"/>
 <instance part="SUPPLY21" gate="GND" x="172.72" y="129.54"/>
 <instance part="SUPPLY22" gate="GND" x="193.04" y="129.54"/>
-<instance part="SUPPLY23" gate="GND" x="180.34" y="160.02" rot="R180"/>
+<instance part="SUPPLY23" gate="GND" x="180.34" y="159.258" rot="R180"/>
 <instance part="SUPPLY24" gate="GND" x="154.94" y="160.02" rot="R180"/>
 <instance part="SUPPLY25" gate="GND" x="167.64" y="160.02" rot="R180"/>
 <instance part="R2" gate="G$1" x="38.1" y="48.26" rot="R180"/>
@@ -15371,6 +15375,7 @@ http://creativecommons.org/</text>
 </instance>
 <instance part="SUPPLY30" gate="GND" x="160.02" y="55.88"/>
 <instance part="CC_LICENSE" gate="G$1" x="165.1" y="25.4"/>
+<instance part="SUPPLY31" gate="GND" x="180.34" y="129.54"/>
 </instances>
 <busses>
 <bus name="XCVRSEL[0..1],TERMSEL,TXREADY,SUSPENDN,TXVALID,PHYRESET,RXACTIVE,OPMODE[0..1],CLKOUT,LINESTATE[0..1],HOSTDISC,DATA[0..7],RXVALID,HOST,RXERROR,VBUS_EN,VBUS_FLAG">
@@ -15591,7 +15596,7 @@ http://creativecommons.org/</text>
 <segment>
 <pinref part="SUPPLY23" gate="GND" pin="GND"/>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="30"/>
-<wire x1="180.34" y1="157.48" x2="180.34" y2="149.86" width="0.1524" layer="91"/>
+<wire x1="180.34" y1="156.718" x2="180.34" y2="149.86" width="0.1524" layer="91"/>
 </segment>
 <segment>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="39"/>
@@ -15649,6 +15654,11 @@ http://creativecommons.org/</text>
 <wire x1="160.02" y1="66.04" x2="160.02" y2="58.42" width="0.1524" layer="91"/>
 <wire x1="162.56" y1="66.04" x2="160.02" y2="66.04" width="0.1524" layer="91"/>
 <junction x="160.02" y="66.04"/>
+</segment>
+<segment>
+<pinref part="SUPPLY31" gate="GND" pin="GND"/>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="29"/>
+<wire x1="180.34" y1="132.08" x2="180.34" y2="139.7" width="0.1524" layer="91"/>
 </segment>
 </net>
 <net name="+3V3" class="0">
@@ -15933,7 +15943,7 @@ http://creativecommons.org/</text>
 <segment>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="37"/>
 <wire x1="190.5" y1="139.7" x2="190.5" y2="119.38" width="0.1524" layer="91"/>
-<label x="189.738" y="120.396" size="1.27" layer="95" rot="R90"/>
+<label x="189.992" y="116.586" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -15954,6 +15964,11 @@ http://creativecommons.org/</text>
 <wire x1="25.4" y1="99.06" x2="15.24" y2="99.06" width="0.1524" layer="91"/>
 <label x="16.51" y="99.314" size="1.27" layer="95"/>
 </segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="16"/>
+<wire x1="162.56" y1="149.86" x2="162.56" y2="167.64" width="0.1524" layer="91"/>
+<label x="162.052" y="166.37" size="1.27" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="LED2" class="0">
 <segment>
@@ -15965,6 +15980,11 @@ http://creativecommons.org/</text>
 <pinref part="PP_HDR" gate="A_B_IO" pin="A1"/>
 <wire x1="25.4" y1="101.6" x2="15.24" y2="101.6" width="0.1524" layer="91"/>
 <label x="16.51" y="101.854" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="15"/>
+<wire x1="162.56" y1="139.7" x2="162.56" y2="119.38" width="0.1524" layer="91"/>
+<label x="162.306" y="116.332" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="LED3" class="0">
@@ -15978,6 +15998,11 @@ http://creativecommons.org/</text>
 <wire x1="40.64" y1="101.6" x2="48.26" y2="101.6" width="0.1524" layer="91"/>
 <label x="43.434" y="102.108" size="1.27" layer="95"/>
 </segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="40"/>
+<wire x1="193.04" y1="149.86" x2="193.04" y2="167.64" width="0.1524" layer="91"/>
+<label x="192.532" y="166.878" size="1.27" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="LED4" class="0">
 <segment>
@@ -15990,6 +16015,11 @@ http://creativecommons.org/</text>
 <wire x1="40.64" y1="99.06" x2="48.26" y2="99.06" width="0.1524" layer="91"/>
 <label x="43.434" y="99.314" size="1.27" layer="95"/>
 </segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="38"/>
+<wire x1="190.5" y1="149.86" x2="190.5" y2="167.64" width="0.1524" layer="91"/>
+<label x="189.992" y="166.878" size="1.27" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="LED5" class="0">
 <segment>
@@ -16001,6 +16031,11 @@ http://creativecommons.org/</text>
 <pinref part="PP_HDR" gate="A_B_IO" pin="B3"/>
 <wire x1="40.64" y1="96.52" x2="48.26" y2="96.52" width="0.1524" layer="91"/>
 <label x="43.434" y="96.774" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="36"/>
+<wire x1="187.96" y1="149.86" x2="187.96" y2="167.64" width="0.1524" layer="91"/>
+<label x="187.452" y="166.878" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="N$3" class="0">
@@ -16124,7 +16159,7 @@ http://creativecommons.org/</text>
 <segment>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="18"/>
 <wire x1="165.1" y1="149.86" x2="165.1" y2="172.72" width="0.1524" layer="91"/>
-<label x="164.338" y="161.544" size="1.27" layer="95" rot="R90"/>
+<label x="164.338" y="161.036" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="LINESTATE0" class="0">
@@ -16220,7 +16255,7 @@ http://creativecommons.org/</text>
 <segment>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="6"/>
 <wire x1="149.86" y1="149.86" x2="149.86" y2="172.72" width="0.1524" layer="91"/>
-<label x="149.352" y="166.624" size="1.27" layer="95" rot="R90"/>
+<label x="149.352" y="166.37" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="DATA3" class="0">
@@ -16284,7 +16319,7 @@ http://creativecommons.org/</text>
 <segment>
 <pinref part="LOGICPORT_HDR" gate="G$1" pin="12"/>
 <wire x1="157.48" y1="149.86" x2="157.48" y2="172.72" width="0.1524" layer="91"/>
-<label x="156.972" y="166.624" size="1.27" layer="95" rot="R90"/>
+<label x="156.972" y="166.37" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="RXVALID" class="0">
@@ -16377,6 +16412,11 @@ http://creativecommons.org/</text>
 <wire x1="25.4" y1="71.12" x2="7.62" y2="71.12" width="0.1524" layer="91"/>
 <label x="8.89" y="71.374" size="1.27" layer="95"/>
 </segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="34"/>
+<wire x1="185.42" y1="149.86" x2="185.42" y2="172.72" width="0.1524" layer="91"/>
+<label x="184.912" y="163.83" size="1.27" layer="95" rot="R90"/>
+</segment>
 </net>
 <net name="SUSPENDN" class="0">
 <segment>
@@ -16403,6 +16443,11 @@ http://creativecommons.org/</text>
 <pinref part="PP_HDR" gate="A_B_IO" pin="A12"/>
 <wire x1="25.4" y1="73.66" x2="7.62" y2="73.66" width="0.1524" layer="91"/>
 <label x="8.89" y="74.168" size="1.27" layer="95"/>
+</segment>
+<segment>
+<pinref part="LOGICPORT_HDR" gate="G$1" pin="28"/>
+<wire x1="177.8" y1="149.86" x2="177.8" y2="172.72" width="0.1524" layer="91"/>
+<label x="177.292" y="163.576" size="1.27" layer="95" rot="R90"/>
 </segment>
 </net>
 <net name="PHYRESET" class="0">
